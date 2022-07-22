@@ -2,7 +2,7 @@
 ## Install
 
 ```bash
-git clone https://github.com/beyzaerkan/friends
+git clone https://github.com/beyzaerkan/friends pingu-front-end
 cd pingu-front-end
 ```
 
@@ -18,6 +18,6 @@ Install dependencies
 
 ## Contributors
 <a href = "https://github.com/beyzaerkan/friends/graphs/contributors">
-  <img src = "https://github.com/beyzaerkan/friends"/>
+  <img src = "https://contrib.rocks/image?repo=beyzaerkan/friends"/>
 </a>
 
