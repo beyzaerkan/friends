@@ -1,0 +1,17 @@
+.image{
+  height: 300px;
+  width: 400px;
+  object-fit:cover;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+.card{ 
+  border: 5px solid black;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.frame{
+  border: 15px solid white;
+}
+
