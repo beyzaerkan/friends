@@ -1,15 +1,20 @@
 import React, { useEffect } from "react";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
-import './Card.css'
+import "./Card.css";
 
-function Card({imageUrl, statusCode, title, onClick}) {
+function Card({ imageUrl, statusCode, title, onClick }) {
   return (
-    
-    <div className="card" onClick={onClick}>
-      <div className="frame">
-        <img className="image" src={imageUrl} alt={statusCode}/>
-        <p>{statusCode} - {title}</p>
+    <div className="card">
+      <div className="frame" onClick={onClick}>
+        <div className="mat">
+          <div className="art">
+            <img src={imageUrl} alt={title} />
+          </div>
+        </div>
+      </div>
+      <div className="info">
+        {statusCode} - {title}
       </div>
     </div>
   );
@@ -25,8 +30,7 @@ Card.propTypes = {
 Card.defaultProps = {
   imageUrl: "imageUrl",
   statusCode: 0,
-  title: "title"
-}
-
+  title: "title",
+};
 
 export default Card;
