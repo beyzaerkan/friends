@@ -2,9 +2,13 @@ import './App.css';
 import Card from '../src/Components/Card/Card'
 import React, { useState }  from 'react';
 import { useNavigate } from 'react-router-dom';
-import codes from './data'
+import  { codes } from './data'
 function App() {
   let navigate = useNavigate();
+  
+  const handleClick = (id) => {
+    return navigate(`/${id}`);
+  }
   
   return (
     <div className="App">
@@ -12,15 +16,10 @@ function App() {
       <div className='cards'>
       {
         codes.map(item => {
-          const handleClick = () => {
-            return navigate(`/${item.statusCode}`, {
-              state: {
-                item,
-              }
-            });
-          }
           return (
-            <Card key={item.statusCode} imageUrl={require("../images/" + item.statusCode + ".jpg")} statusCode={item.statusCode} title={item.title} onClick={handleClick}></Card>
+            <Card key={item.statusCode} imageUrl={require("../images/" + item.statusCode + ".jpg")} statusCode={item.statusCode} title={item.title} onClick={() => {
+              handleClick(item.statusCode);
+            }}></Card>
           )
         })
       }

@@ -1,11 +1,13 @@
 import React, {useState} from "react";
-import { useLocation } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+import { findById } from '../../data'
 
 import './CardDetail.css'
+
 function CardDetail () {
-  const { state } = useLocation();
-  const [code, setCode] = useState(state.item)
-  
+  const { statusCode } = useParams();
+  const code = findById(statusCode);
+
   return (
     <div className="card-detail">
       <img src={require("../../../images/" + code.statusCode + ".jpg")} alt={code.title} />
